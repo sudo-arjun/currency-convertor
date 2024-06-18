@@ -28,7 +28,7 @@ function CurConvertor() {
     }
     return (
         <div className='h-screen w-screen bg-cover bg-img-sm lg:bg-img-wide flex justify-center items-center' >
-            <div className='rounded-xl shadow-md flex flex-col justify-evenly items-center h-[330px] w-[450px] backdrop-blur-md bg-white/30 '>
+            <div className='rounded-xl shadow-md flex flex-col justify-evenly items-center w-9/12 h-96 sm:h-[330px] sm:w-[450px] backdrop-blur-md bg-white/30 '>
                 <InputCon iState={fromAmount} iSetState={setFromAmount} iLabelName='From' sLabelName='currency' sState={fromCur} sSetState={setFromCur} optionObj={options}></InputCon>
                 <button onClick={swap} className=' -m-12 h-12 w-12 p-1.5 rounded-xl hover:shadow-lg transition ease-out duration-200 delay-75 hover:bg-white/10 flex justify-center items-center'>
                     <img src={arrowImg} alt="swap" className='w-11/12 drop-shadow-md' />
