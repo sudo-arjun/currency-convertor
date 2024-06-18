@@ -12,7 +12,7 @@ function useApi() {
         if (curObj) 
             setCur(() => curObj)
         else {
-            fetch('https://openexchangerates.org/api/currencies.json?app_id=b9063577d64e4a18b23c9106c8582c82')
+            fetch(`https://openexchangerates.org/api/currencies.json?app_id=${import.meta.env.VITE_CUR_KEY}`)
                 .then((res) => res.json())
                 .then((obj) => {
                     curObj = obj;
@@ -28,7 +28,7 @@ function useApi() {
             if((currentTime - ratesObj.timestamp) > 24*60*60){
                 //fetch new rates
                 console.log('new data fetched')
-                 fetch('https://openexchangerates.org/api/latest.json?app_id=b9063577d64e4a18b23c9106c8582c82')
+                 fetch(`https://openexchangerates.org/api/latest.json?app_id=${import.meta.env.VITE_CUR_KEY}`)
                 .then((res) => res.json())
                 .then((obj) => {
                     ratesObj = obj;
@@ -40,7 +40,7 @@ function useApi() {
             setRates(ratesObj.rates)
         }
         else {
-            fetch('https://openexchangerates.org/api/latest.json?app_id=b9063577d64e4a18b23c9106c8582c82')
+            fetch(`https://openexchangerates.org/api/latest.json?app_id=${import.meta.env.VITE_CUR_KEY}`)
                 .then((res) => res.json())
                 .then((obj) => {
                     ratesObj = obj;
