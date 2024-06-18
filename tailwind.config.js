@@ -10,8 +10,8 @@ export default {
         'okok': '10px'
       },
       backgroundImage:{
-        'img-wide': `url(./src/assets/world.jpg)`,
-        'img-sm' : 'url(./src/assets/coins.jpeg)'
+        'img-wide': `url(/world.jpg)`,
+        'img-sm' : 'url(/coins.jpeg)'
       }
     },
   },
